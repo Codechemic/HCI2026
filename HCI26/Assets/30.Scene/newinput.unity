@@ -665,6 +665,7 @@ GameObject:
   - component: {fileID: 1263547282}
   - component: {fileID: 1263547281}
   - component: {fileID: 1263547280}
+  - component: {fileID: 1263547283}
   m_Layer: 11
   m_Name: Cylinder
   m_TagString: Untagged
@@ -767,6 +768,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1263547278}
   m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1263547283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1263547278}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dcd3db402137632448f0194e51f78221, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CanonController
+  shellPrefabs: {fileID: 4022250750001368094, guid: c9a6b8b8859b0c142939fd85935fc4c3, type: 3}
+  firetrans: {fileID: 645142779}
 --- !u!1 &1438978126
 GameObject:
   m_ObjectHideFlags: 0
@@ -1021,9 +1036,6 @@ GameObject:
   - component: {fileID: 2040135335}
   - component: {fileID: 2040135334}
   - component: {fileID: 2040135338}
-  - component: {fileID: 2040135339}
-  - component: {fileID: 2040135340}
-  - component: {fileID: 2040135341}
   m_Layer: 11
   m_Name: Tanks
   m_TagString: Untagged
@@ -1154,64 +1166,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &2040135339
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040135333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 75971abddb0ea8e44b937acae61040da, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: FPS
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!114 &2040135340
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040135333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bcfa432b272139c40b96e60e0a9e95a1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::NewMonoBehaviourScript
-  moveSpeed: 2
-  rotateSpeed: 10
---- !u!114 &2040135341
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2040135333}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d57f9008f5070d4a86cc8b4fe7f089e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CannNewInput
-  shellPrefabs: {fileID: 4022250750001368094, guid: c9a6b8b8859b0c142939fd85935fc4c3, type: 3}
-  firetrans: {fileID: 645142779}
 --- !u!1 &2069338307
 GameObject:
   m_ObjectHideFlags: 0
