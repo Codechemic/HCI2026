@@ -8,12 +8,12 @@
             "actions": [
                 {
                     "name": "Move",
-                    "type": "PassThrough",
+                    "type": "Value",
                     "id": "86a048c5-b684-4e74-993c-eaac12761863",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
-                    "initialStateCheck": false,
+                    "initialStateCheck": true,
                     "priority": 0
                 },
                 {
@@ -39,7 +39,7 @@
             ],
             "bindings": [
                 {
-                    "name": "1D Axis",
+                    "name": "Arrow",
                     "id": "d1308c47-aaa2-442d-83fe-6223d5f18b68",
                     "path": "1DAxis",
                     "interactions": "",
@@ -72,7 +72,40 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "1D Axis",
+                    "name": "Key",
+                    "id": "12657919-9c69-4f92-8576-2a0ed19a1723",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "0233db54-3efa-4116-8e87-668cdb3768f6",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "0500dd1a-feae-4ed5-a858-2a8f52965dc5",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Move",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Arrow",
                     "id": "6b8fd3ad-074a-4bb4-8e6c-f11b379f8e45",
                     "path": "1DAxis",
                     "interactions": "",
@@ -97,6 +130,39 @@
                     "name": "positive",
                     "id": "a4e10589-7c93-425b-a5e9-acc1cae4273c",
                     "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Key",
+                    "id": "887e41e3-2330-4431-ab9b-36a002e7bad2",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "ed0fe550-3771-4a69-9d2e-d2d9313636c5",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Rotate",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8300bfeb-affc-49c2-9711-391615866d33",
+                    "path": "<Keyboard>/d",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

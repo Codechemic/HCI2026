@@ -26,6 +26,6 @@ public class CanonNewInput : MonoBehaviour
     void OnFire(InputValue Value)
     {
         shell = Instantiate(shellPrefabs, firetrans.position, firetrans.rotation);
-        shell.GetComponent<ShellController>().Shoot(FireTrans.up);
+        shell.GetComponent<ShellController>().Shoot(firetrans.up);
     }
 }
