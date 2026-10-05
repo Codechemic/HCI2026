@@ -1070,6 +1070,10 @@ GameObject:
   - component: {fileID: 2040135339}
   - component: {fileID: 2040135341}
   - component: {fileID: 2040135342}
+  - component: {fileID: 2040135344}
+  - component: {fileID: 2040135343}
+  - component: {fileID: 2040135346}
+  - component: {fileID: 2040135345}
   m_Layer: 11
   m_Name: Tanks
   m_TagString: Untagged
@@ -1294,6 +1298,54 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TankMoveEvent
   moveSpeed: 2
   rotateSpeed: 100
+--- !u!114 &2040135343
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040135333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6297efa3a1555b1409328c1a5002f235, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCubeCsharpEvent
+--- !u!114 &2040135344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040135333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70766fee8bfb6504794650c1aa97e176, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CollisionDetector
+--- !u!114 &2040135345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040135333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77d00902fc8012749a81f1b49bfbe8bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCubeEvent
+--- !u!114 &2040135346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2040135333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 510d30264f9944045aa348c72a1c1f04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerCubeSendMessage
 --- !u!1 &2069338307
 GameObject:
   m_ObjectHideFlags: 0
