@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 30
-  productGUID: 5e117c0f5b113cf44b0777275ef68f68
+  productGUID: 17052b570136b524d8bf1337b4d8e004
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: HCI26
+  productName: wsb01
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -824,14 +824,14 @@ PlayerSettings:
   editorAssembliesCompatibilityLevel: 1
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: HCI26
+  metroPackageName: wsb01
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: HCI26
+  metroApplicationDescription: wsb01
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -902,11 +902,11 @@ PlayerSettings:
   activeInputHandler: 1
   windowsGamepadBackendHint: 0
   enableDirectStorage: 0
-  cloudProjectId: 16f6860c-7d1c-4ea1-a697-fafeb6dc28ca
+  cloudProjectId: 24ec65fa-a3b5-4713-96f7-a3eb63eb9bd0
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: HCI26
-  organizationId: wavaspath
+  projectName: wsb01
+  organizationId: unity_20224258
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   hmiLoadingImage: {fileID: 0}
