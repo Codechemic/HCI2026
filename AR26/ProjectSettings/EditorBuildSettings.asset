@@ -8,9 +8,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/10.Scenes/AR02.unity
     guid: e68f38904154c914e9ad494d4daba43e
-  - enabled: 1
+  - enabled: 0
     path: Assets/10.Scenes/AR03.unity
     guid: 03ef4041213762c40b7a10298dc7f6e1
+  - enabled: 1
+    path: Assets/10.Scenes/80.NavMeshTest.unity
+    guid: 75759680741dd5e428528ec0d031adfe
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 600dae5194b6cbd48ad4f4ffc0ee7ca8, type: 2}
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
