@@ -5,23 +5,24 @@ public class DrawButtonController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public TextMeshProUGUI drawText;
-    public bool isDrawing = false;
 
     int i = 0;
 
-    public void Changebutton()
+    public void ChangeDrawMode()
     {
-        i = (i+1)%2;
+        i = (i + 1) % 2;
 
-        if (i==1){
-            drawText.text = "stop";
+        if(i == 1)
+        {
+            drawText.text = "Stop";
             GameManager.instance.isDrawing = true;
-            GameManager.instance.ShowMessage("start");
+            GameManager.instance.ShowMessage("Start Drawing");
         }
-        else{
+        else
+        {
             drawText.text = "Draw";
             GameManager.instance.isDrawing = false;
-            GameManager.instance.ShowMessage("end");
+            GameManager.instance.ShowMessage("Stop Drawing");
         }
     }
 }

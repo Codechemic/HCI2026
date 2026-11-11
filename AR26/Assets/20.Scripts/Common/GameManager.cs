@@ -1,25 +1,20 @@
-
 using TMPro;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
     public GameObject spherePrefab;
-    public TextMeshProUGUI message;
+
+    public TextMeshProUGUI messageText;
     public Camera arCamera;
-
-    public bool isDrawing = true;
-
-    private Vector3 prevPosition;
-    private bool hasPrevPosition = false;
-
-    static GameManager m_instance;
-
+    public bool isDrawing = false;
+    Vector3 prevPosition = new Vector3(0, 0, 0);
+    
     public static GameManager instance
     {
         get
         {
-            if (m_instance == null)
+            if(m_instance == null)
             {
                 m_instance = FindAnyObjectByType<GameManager>();
             }
@@ -27,10 +22,16 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    public void ShowMessage(string text)
+    static GameManager m_instance;
+
+    public void GameOver()
     {
-        message.text = text;
-        message.gameObject.SetActive(true);
+        Application.Quit();
+    }
+
+    public void ShowMessage(string message)
+    {
+        messageText.text = message;
     }
 
     private void Update()
@@ -40,44 +41,16 @@ public class GameManager : MonoBehaviour
 
     void DrawSpheres()
     {
-        if (isDrawing == false)
-        {
-            hasPrevPosition = false;
-            return;
-        }
-
-        if (spherePrefab == null || arCamera == null)
-            return;
+        if (isDrawing == false) return;
 
         Vector3 currentPosition = arCamera.ScreenToWorldPoint(
-            new Vector3(Screen.width / 2f, Screen.height / 2f, 0.5f)
-        );
+            new Vector3(Screen.width / 2, Screen.height / 2, 0.5f));
 
-        if (hasPrevPosition)
-        {
-            float distance = Vector3.Distance(
-                currentPosition,
-                prevPosition
-            );
+        float distance = Vector3.Distance(currentPosition, prevPosition);
+        if (distance < 0.3) return;
 
-            if (distance < 0.3f)
-                return;
-        }
-
-        GameObject go = Instantiate(
-            spherePrefab,
-            currentPosition,
-            Quaternion.identity
-        );
-
+        GameObject go = Instantiate(spherePrefab, currentPosition, Quaternion.identity);
         go.transform.parent = transform;
-
-        prevPosition = currentPosition;
-        hasPrevPosition = true;
-    }
-
-    public void GameOver()
-    {
-        Application.Quit();
+        prevPosition = go.transform.position;
     }
 }
