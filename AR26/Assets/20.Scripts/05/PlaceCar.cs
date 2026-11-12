@@ -1,21 +1,21 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Timeline;
 using UnityEngine.XR.ARFoundation;
-
 using UnityEngine.XR.ARSubsystems;
 
 public class PlaceCar : MonoBehaviour
 {
-    
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private ARRaycastManager arRayManager;
+
+    public GameObject marker;
+
     void Start()
     {
         arRayManager = GetComponent<ARRaycastManager>();
+
         marker.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         DetectGround();
@@ -23,12 +23,22 @@ public class PlaceCar : MonoBehaviour
 
     void DetectGround()
     {
-        Vector2 screenCenter = new Vector2(Screen.width / 2, Screen.height / 2);
+        Vector2 screenCenter = new Vector2(
+            Screen.width / 2,
+            Screen.height / 2
+        );
 
         List<ARRaycastHit> hits = new List<ARRaycastHit>();
-        if (ARRayManager.Raycast(screenCenter, hits, TrackableType.Planes))
-        {
 
+        if (arRayManager.Raycast(screenCenter, hits, TrackableType.Planes))
+        {
+            marker.SetActive(true);
+
+            marker.transform.position = hits[0].pose.position;
+        }
+        else
+        {
+            marker.SetActive(false);
         }
     }
 }
